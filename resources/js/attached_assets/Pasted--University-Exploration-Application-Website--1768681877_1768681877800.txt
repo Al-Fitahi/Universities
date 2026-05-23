@@ -1,0 +1,173 @@
+ University Exploration & Application Website
+الهدف:
+منصة عصرية واحترافية، تتيح للمستخدمين استكشاف الجامعات والكليات، الاطلاع على التفاصيل، قراءة المقالات، والحصول على توجيه ذكي حسب الاهتمامات والمؤهلات الأكاديمية، مع إمكانية التقديم للجامعات.
+
+🏠 Home Page (Landing Page)
+Features
+Hero section:
+صور احترافية متعلقة بالتعليم والجامعات
+نص ترحيبي قصير وواضح (introduction)
+زر (call-to-action): استكشاف الجامعات، استكشاف الكليات
+About Platform: ملخص بسيط عن المنصة
+Highlights & Benefits: أهم الفوائد للمستخدم
+تصميم نظيف، خطوط واضحة، وسرد مختصر
+🛣️ User Journeys (Main Paths)
+🔹 Path 1: Browse Universities
+Universities Listing Page
+
+عرض الجامعات على شكل بطاقات (Card)
+universityImage: صورة الجامعة
+universityName: اسم الجامعة
+rating: تقييم (نجوم)
+location: الموقع (مدينة/دولة)
+Sorting/Filtering:
+rating: حسب التقييم
+location: حسب الموقع
+fees: حسب الرسوم الدراسية
+search: شريط بحث (يبحث حسب الاسم أو الموقع أو التخصص)
+Pagination: تقسيم الصفحات حسب عدد الجامعات لكل صفحة
+University Details Page
+
+imageGallery: معرض صور الجا  عة (RTL carousel - شرائح صور تتحرك من اليمين لليسار تلقائيًا)
+universityOverview:
+description: وصف الجامعة
+location: الموقع (خريطة تفاعلية)
+collegesMajorsTable: جدول للكليات والتخصصات
+collegeName: اسم الكلية
+majors[]: قائمة التخصصات تحت كل كلية
+majorName: اسم التخصص
+studyYears: عدد سنوات الدراسة
+tuitionFees: الرسوم الدراسية
+requiredGPA: المعدل المطلوب
+applyButton: زر التقديم (ينقل المستخدم إلى صفحة نموذج التقديم)
+universityArticlesButton: زر للذهاب إلى صفحة مقالات الجامعة
+userRating: إمكانية تقييم الجامعة (نظام نجوم)
+Apply Page (University)
+
+بيانات المستخدم:
+firstName: الاسم الأول (إلزامي)
+lastName: اسم العائلة (إلزامي)
+email: البريد الإلكتروني (إلزامي، تحقق من صيغة الايميل)
+phoneNumber: رقم الهاتف (اختياري، تحقق من الأرقام)
+academicData: بيانات أكاديمية (GPA، شهادة، السنة الدراسية)
+🔹 Path 2: Browse Colleges & Majors
+Colleges Page
+
+عرض الكليات كبطاقات:
+collegeImage: صورة الكلية
+collegeName: اسم الكلية
+كلية قابلة للفتح: عند النقر يُظهر majors[]
+majorName: اسم التخصص
+Major Details:
+majorDescription: وصف التخصص
+careerOpportunities: الفرص الوظيفية المرتبطة
+studyDuration: مدة الدراسة
+applyButton: زر التقديم (ينقل المستخدم إلى صفحة الجامعات التي توفر التخصص)
+Universities Offering Major Page
+
+قائمة الجامعات تقدم التخصص
+universityName: اسم الجامعة
+tuitionFees: الرسوم
+rating: تقييم
+location: الموقع على الخريطة
+Sorting/Filtering:
+cheapest: الأقل تكلفة
+highestRated: الأعلى تقييماً
+location: تصفية حسب الموقع (خريطة تفاعلية)
+🔹 Path 3: Articles
+Articles Page
+
+عرض المقالات لجامعات مختلفة:
+articleImage: صورة المقال
+articleTitle: عنوان المقال
+universityName: الجامعة التابعة
+publishDate: تاريخ النشر
+likeButton: زر إعجاب (قلب)
+Filtering/Search:
+byUniversity: حسب الجامعة
+byDate: حسب التاريخ
+search: شريط بحث (يبحث العنوان، الجامعة)
+🔹 Path 4: Smart Guidance (User Preferences)
+Guidance Page
+
+interactiveFlow: تدفق أسئلة تفاعلي
+academicGPA: معدل المستخدم
+interests: اهتمامات وهوايات المستخدم
+يظهر النتائج المناسبة:
+suitableColleges: الكليات المناسبة
+availableMajors: التخصصات المتاحة
+لكل تخصص/كلية تظهر:
+description: وصف
+eligibility: شرط المعدل
+applyButton: زر للتقديم إلى الكلية/التخصص مباشرة
+🔍 Global Features (All Pages)
+globalSearch: شريط بحث لكل الصفحات
+advancedFiltering: تصفية متقدمة تناسب سياق الصفحة
+responsiveDesign: التصميم متوافق مع جميع الأجهزة (Mobile First)
+smoothAnimations: الانتقال والحركات سلسة (مثال: Framer Motion)
+cleanUI: واجهة مستخدم عصرية وبسيطة
+fastLoading: وقت التحميل سريع
+reusableComponents: المكونات قابلة لإعادة الاستخدام
+structure: تقسيم المجلدات بشكل واضح وفعال
+expectDataViaInertiaProps: كل مكون يستقبل البيانات عبر الخصائص من Inertia
+🌐 Static Pages
+About Us Page
+
+عن فكرة المنصة وقيمها وفريق العمل (aboutDescription, teamMembers[])
+Contact Us Page
+
+نموذج للتواصل:
+name: الاسم (إلزامي)
+email: البريد الإلكتروني (إلزامي، تحقق من الصيغة)
+message: الرسالة (إلزامي، 40 حرف كحد أدنى)
+contactInfo: وسائل التواصل
+ارسال وتأكيد النجاح أو ظهور رسائل الخطأ
+🎨 UI / UX Requirements
+professionalDesign: تصميم مهني أنيق وحديث
+cleanSpacing: فراغات متقنة بين المكونات
+clearTypography: خطوط واضحة وسهلة القراءة
+framerMotionAnimations: حركات سلسة باستعمال Framer Motion إذا أمكن
+supportLanguageSwitch: تبديل اللغة (English/Arabic) مع دعم اتجاه RTL/ LTR كامل
+themeAndColorSwitcher: تبديل الألوان (فاتح/داكن + لون أساسي من عدة خيارات)
+🧩 Technical Requirements
+Use React + Inertia.js (الصفحات والمكونات React فقط، تتصل مستقبلًا بلارافيل)
+كل المكونات تحت توقع استلام البيانات عبر Inertia props
+لا يوجد منطق Backend أو Mock data
+تقسيم مجلدات واضح:
+/pages
+/components
+/layouts
+/assets
+/contexts
+/hooks
+كود نظيف وقابل للصيانة
+📝 Field Names & Validation Rules
+أمثلة لأسماء الحقول المناسبة:
+
+universityName (string, required)
+universityImage (string / URL, required)
+rating (number, optional [0-5])
+location (string, required)
+tuitionFees (number, ≥0)
+studyYears (number, min 1, max 8)
+requiredGPA (number, min 0, max 4)
+majorName (string, required)
+collegeName (string, required)
+articleTitle (string, required)
+publishDate (date, required)
+likeCount (integer, default 0)
+userName (string, required)
+message (string, minLength 40, required)
+theme (enum [light, dark, customColor])
+language (enum [ar, en])
+interests (array of string)
+academicGPA (number, min 0, max 4)
+ملاحظات هامة:
+
+تصميم بدون لوحة تحكم أو إدارة
+لا يوجد منطق خلفي
+التركيز على تجربة المستخدم، الأداء، القابلية للتطوير
+الالتزام بالاتجاهين (RTL/LTR)
+واجهة تتوقع البيانات فقط عن طريق props (لا تعتمد على بيانات وهمية أو statically coded data)
+قابلية إعادة الاستخدام وتخصيص كل المكونات
+كل الصيغ واضحة ومناسبة لأي أداة AI أو مطوّر

@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Filament\Resources\Colleges\Schemas;
+
+use Filament\Infolists\Components\ImageEntry;
+use Filament\Infolists\Components\TextEntry;
+use Filament\Schemas\Schema;
+use Illuminate\Support\HtmlString;
+
+class CollegeInfolist
+{
+    public static function configure(Schema $schema): Schema
+    {
+        return $schema
+            ->components([
+                TextEntry::make('public_id'),
+                TextEntry::make('name'),
+                TextEntry::make('description')
+                ->html(),
+                ImageEntry::make('image_path')
+                    ->disk('public'),
+                TextEntry::make('created_at')
+                    ->dateTime(),
+                TextEntry::make('updated_at')
+                    ->dateTime(),
+            ]);
+    }
+}
